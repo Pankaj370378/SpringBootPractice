@@ -1,0 +1,199 @@
+<div class="header">
+    <div class="menu">
+      <nav class="stroke ">
+        <ul>
+  
+          <li>
+            <a routerLink="home" class="nav-link" routerLinkActive="active">Home</a>
+          </li>
+          <li>
+            <a routerLink="add" class="nav-link" routerLinkActive="active">Blog</a>
+          </li>
+          <li>
+            <a routerLink="add" class="nav-link" routerLinkActive="active">Contact</a>
+          </li>
+          <li>
+            <a routerLink="about" class="nav-link" routerLinkActive="active">About me</a>
+          </li>
+          <li>
+            <a class="nav-link" data-toggle="modal" data-target="#exampleModal">Sign In</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal">
+    <div class="modal-dialog wide modal-dialog-centered ">
+      <div class="modal-content">
+        <div class="modal-body">
+  
+          <div>
+            <ul class="nav nav-pills ">
+              <li class=""><a class="btn td-btn outline mt-30" data-toggle="pill" href="#login" role="tab">Login</a></li>
+              <li><a class="btn td-btn-register outline  mt-30" data-toggle="pill" href="#register">Register</a></li>
+            </ul>
+  
+            <div class="tab-content">
+              <div id="login" class="tab-pane fade in active">
+                <form>
+                  <div class="login-content">
+                    <p >Sign in with:</p>
+                    <button type="button" class="btn btn-secondary btn-floating mx-1">
+                      <!-- Facebook -->
+                          <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i>
+                    </button>
+  
+                    <button type="button" class="btn btn-secondary btn-floating mx-1">
+                     <!-- Google -->
+                        <i class="fab fa-google fa-2x" style="color: #dd4b39;"></i>
+                    </button>
+  
+                    <button type="button" class="btn btn-secondary btn-floating mx-1">
+                      <!-- Twitter -->
+                          <i class="fab fa-twitter fa-2x" style="color: #55acee;"></i>    
+                    </button>
+  
+                    <button type="button" class="btn btn-secondary btn-floating mx-1">
+                      <!-- Github -->
+                            <i class="fab fa-github fa-2x" style="color: #333333;"></i>
+                    </button>
+                  </div>
+  
+                   <p class="or">or:</p>
+  
+                  <!-- Email input -->
+                 <div>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Username</mat-label>
+                      <input type="email" matInput placeholder="Enter your username">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                  </div>
+                  <div>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Password</mat-label>
+                      <input type="password" matInput placeholder="Enter your password">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                  </div>
+  
+                  <!-- 2 column grid layout -->
+                  <div class="row mb-4">
+                    <div class="col-md-6 d-flex justify-content-left">
+                      <!-- Checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+                        <label class="form-check-label " for="loginCheck"> Remember me </label>
+                      </div>
+                    </div>
+  
+                    <div class="col-md-6 d-flex justify-content-center ">
+                      <!-- Simple link -->
+                      <a class="forgot-password" href="#!">Forgot password?</a>
+                    </div>
+                  </div>
+  
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-block mb-6">Sign in</button>
+  
+                  <!-- Register buttons -->
+                  <div class="text-center">
+                    <p class="not-a-member">Not a member? <a href="#!">Register</a></p>
+                  </div>
+                </form>
+              </div>
+              <!-- register -->
+              <div id="register" class="tab-pane fade">
+                     <form (ngSubmit)="formSubmit()">
+                  <div class="login-content">
+                    <p >Sign up with:</p>
+                    <button type="button" class="btn btn-secondary btn-floating mx-1">
+                      <!-- Facebook -->
+                          <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i>
+                    </button>
+  
+                    <button type="button" class="btn btn-secondary btn-floating mx-1">
+                     <!-- Google -->
+                        <i class="fab fa-google fa-2x" style="color: #dd4b39;"></i>
+                    </button>
+  
+                    <button type="button" class="btn btn-secondary btn-floating mx-1">
+                      <!-- Twitter -->
+                          <i class="fab fa-twitter fa-2x" style="color: #55acee;"></i>    
+                    </button>
+  
+                    <button type="button" class="btn btn-secondary btn-floating mx-1">
+                      <!-- Github -->
+                            <i class="fab fa-github fa-2x" style="color: #333333;"></i>
+                    </button>
+                  </div>
+  
+                   <p class="or">or:</p>
+  
+                  <!-- Email input -->
+                 <div>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Name</mat-label>
+                      <input type="text" matInput placeholder="Enter your name" [(ngModel)]="user.name" name="name">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                  </div>
+                  <div>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Email or username</mat-label>
+                      <input type="email" matInput placeholder="Enter your email or username" [(ngModel)]="user.username" name="username">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                  </div>
+                  <div>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Password</mat-label>
+                      <input type="password" matInput placeholder="Enter your password" [(ngModel)]="user.password" name="password">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                  </div>
+                  <div>
+                    <mat-form-field appearance="outline">
+                      <mat-label>About</mat-label>
+                      <input type="text" matInput placeholder="Something about yourself" [(ngModel)]="user.about" name="about">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                  </div>
+  
+                  <!-- 2 column grid layout -->
+                  <div class="row mb-4">
+                    <div class="col-md-6 d-flex justify-content-left">
+                      <!-- Checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+                        <label class="form-check-label " for="loginCheck"> Remember me </label>
+                      </div>
+                    </div>
+  
+                    <div class="col-md-6 d-flex justify-content-center ">
+                      <!-- Simple link -->
+                      <a class="forgot-password" href="#!">Forgot password?</a>
+                    </div>
+                  </div>
+  
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-block mb-6">Sign in</button>
+  
+                  <!-- Register buttons -->
+                  <div class="text-center">
+                    <p class="not-a-member">Not a member? <a href="#!">Register</a></p>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>

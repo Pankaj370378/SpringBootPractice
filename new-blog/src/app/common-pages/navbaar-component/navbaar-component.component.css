@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css");
+
+  nav ul {
+	list-style: none;
+	text-align: center;
+  }
+  nav ul li {
+	display: inline-block;
+  }
+  nav ul li a {
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	color: #aaa;
+	font-weight: 800;
+	text-transform: uppercase;
+	margin: 0 10px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+	transition: all .5s;
+  }
+  nav ul li a:hover {
+	color: #555;
+  }
+  nav.stroke ul li a,
+  nav.fill ul li a {
+	position: relative;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 0%;
+	content: '.';
+	color: transparent;
+	background: #9e1b1bee;
+	height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+	width: 100%;
+  }
+  
+  nav.fill ul li a {
+	transition: all 2s;
+  }
+  
+  nav.fill ul li a:after {
+	text-align: left;
+	content: '.';
+	margin: 0;
+	opacity: 0;
+  }
+  nav.fill ul li a:hover {
+	color: #fff;
+	z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+	z-index: -10;
+	animation: fill 1s forwards;
+	-webkit-animation: fill 1s forwards;
+	-moz-animation: fill 1s forwards;
+	opacity: 1;
+  }
+/* login form */
+  .td-btn {
+	font-weight:bolder;
+	padding: 13px 62px;
+	height: 43px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+    margin-left: 95px;
+  }
+  .td-btn-register{
+    font-weight:bolder;
+	height: 43px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 13px 62px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+    margin-left: 291px;
+  }
+ 
+  .td-btn.small {
+	font-family: 'Work Sans', helvetica, sans-serif;
+	font-size: 0.7rem;
+	padding: 9px 15px 8px;
+  }
+  .outline {
+	background-color: transparent;
+	border: 3px solid #9da6a4;
+	color: #9da6a4;
+  }
+  .outline:focus,
+  .outline:hover {
+	background-color: #9da6a4;;
+	color: #fffefd;
+  }
+  .outline {
+	border-color: #747c7b;
+	color: #787f7e;
+  }
+  .outline.green:focus,
+  .outline.green:hover {
+	background-color: #29a598;
+	color: #fffefd;
+  }
+  .outline.white {
+	border-color: #fffefd;
+	color: #fffefd;
+  }
+  .outline.white:focus,
+  .outline.white:hover {
+	background-color: #fffefd;
+	color: #df3778;
+  }
+
+ 
+  .sign-with{
+	margin-left: 29px;
+  }
+  .or{
+	text-align: center;
+	font-weight: bolder;
+  }
+
+  mat-form-field {
+	width: 100%;
+  }
+.login-content{
+    margin-top: 58px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+}
+/* login form */
+.text-center.mb-3{
+	margin-top: 58px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+
+
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: #9387ab;
+	font: 400 10px "Lato", sans-serif;
+	text-align: center;
+}
+
+.header {
+	width: 100%;
+	height: 75px;
+	background: #17141d;
+	opacity: 0.95;
+	overflow: hidden;
+	-webkit-box-shadow: #333 1px 3px 4px;
+	-moz-box-shadow: #333 1px 3px 4px;
+	box-shadow: #333 1px 3px 4px;
+}
+
+.content {
+	width: 100%;
+	height: calc(100% - 75px);
+	background-image: url(https://picsum.photos/1000/700);
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #9387ab;
+}
+h1 {
+	letter-spacing: 4px;
+	padding: 1em;
+	color: white;
+	background-color: #17141d;
+	opacity: 0.8;
+}
+
+svg.line-top {
+	width: 100%;
+	background-color: #17141d;
+}
+svg.line-bottom {
+	width: 100%;
+}
+.menu {
+	/* width: 750px; */
+	margin: 0 auto;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	
+}
+
+ul li {
+	margin: 0;
+	padding: 10px 0 10px 0;
+	width: 10%;
+	height: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 3.5px;
+	transition: all 0.5s ease-out;
+}
+
+li.active {
+	color: orange;
+	transform: scale(1.1);
+}
+
+polygon {
+	stroke-width: 2px;
+	stroke: orange;
+	fill: orange;
+}
+
+@media (max-device-width: 991px) {
+	.header {
+		height: 64px;
+	}
+
+	body {
+		font-size: 0.4em;
+	}
+	.content {
+		height: calc(100% - 64px);
+	}
+}
